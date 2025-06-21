@@ -15,4 +15,7 @@ mongoose.connect('mongodb://localhost:27017/fleetlink', {
   .catch(err => console.log("Mongo Error:", err));
 app.use('/api/vehicles', vehicleRoutes);
 app.use('/api/bookings', bookingRoutes);
+app.get('/',async(req,res)=>{
+  res.send("hello")
+})
 app.listen(5000, () => console.log('Server running on http://localhost:5000'));
